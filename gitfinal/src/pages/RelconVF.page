@@ -1,0 +1,13 @@
+<apex:page controller="RelCon">
+<apex:form >
+<apex:pageBlock >
+<apex:inputText value="{!accname}"/>
+<apex:commandButton value="Get" action="{!getCon}"/>
+<apex:pageBlockTable value="{!con}" var="c">
+<apex:column headerValue="Name">
+{!c.name}
+</apex:column>
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

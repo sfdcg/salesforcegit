@@ -1,0 +1,12 @@
+<apex:page controller="Ae">
+<apex:form >
+<apex:pageBlock >
+<apex:pageblocktable value="{!myList}" var="a">
+<apex:column value="{!a.name}"/>
+<apex:column value="{!a.Industry}"/>
+</apex:pageblocktable>
+<apex:outputLabel >{!name}</apex:outputLabel>
+</apex:pageBlock>
+</apex:form>
+ 
+</apex:page>

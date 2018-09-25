@@ -1,0 +1,12 @@
+<apex:page Controller="Borrowed_Books" sidebar="false">
+<apex:pageBlock >
+<apex:form >
+<apex:pageblockSection >
+<apex:inputText value="{!Name}" label="BookName"/>
+<apex:inputText value="{!BookID}"  label="BookID"/>
+<apex:inputText value="{!MemberId}" label="MemberId"/>    
+<apex:commandButton value="Save" action="{!save}"/>
+</apex:pageblockSection>
+</apex:form>
+</apex:pageBlock>
+</apex:page>

@@ -1,0 +1,9 @@
+<apex:page sidebar="false" controller="Dltc">
+<apex:form >
+<p>DATALOADTESTING</p>
+Name :
+<apex:inputtext value="{!namevalue}"/>
+<p></p>
+<apex:commandButton value="INSERT" style="color:red;" action="{!doInsert}" />
+</apex:form>
+</apex:page>

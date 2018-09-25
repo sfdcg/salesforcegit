@@ -1,0 +1,11 @@
+<apex:page controller="exampleCon2">
+ 
+   <apex:form >
+   <apex:actionFunction name="timeo" action="{!Username}" reRender="out"/>
+   </apex:form>
+   
+   <apex:outputLabel value="Timer">Name</apex:outputLabel>
+   <apex:outputPanel id="out">
+   </apex:outputPanel>
+   <script>window.settimeout(timeo,2000)</script>
+</apex:page>

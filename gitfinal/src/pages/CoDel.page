@@ -1,0 +1,17 @@
+<apex:page controller="CoDelController">
+<apex:pageblock >
+<apex:pageblockSection >
+<apex:form >
+<apex:pageblockTable value="{!rec}" var="a">
+<apex:column headerValue="Name" value="{!a.name}"/>
+<apex:column headerValue="Name">
+<apex:commandLink value="del" action="{!del}">
+<apex:param assignTo="{!xid}" value="{!a.id}"/>
+</apex:commandLink>
+</apex:column>
+</apex:pageblockTable>
+</apex:form>
+</apex:pageblockSection>
+
+</apex:pageblock>
+</apex:page>

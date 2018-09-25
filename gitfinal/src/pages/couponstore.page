@@ -1,0 +1,42 @@
+<apex:page controller="store" sidebar="false" showHeader="false">
+<p>Items</p>
+<apex:form >
+<apex:pageblock >
+<apex:pageBlockSection >
+<apex:pageBlockSectionItem >
+<apex:pageBlockTable value="{!items}" var="i" id="table">
+<apex:column headerValue="Name">
+<apex:commandLink action="{!qinc}" reRender="out">
+{!i.name}
+<apex:param name="recval" assignTo="{!recval}" value="{!i.name}"/>
+</apex:commandlink>
+</apex:column>
+<apex:column value="{!i.accountnumber}"/>
+</apex:pageBlockTable>
+</apex:pageBlockSectionItem>
+</apex:pageBlockSection>
+</apex:pageblock>
+</apex:form>
+<p>Cart</p>
+<apex:outputpanel id="out">
+<apex:pageBlock >
+<apex:pageBlockSection >
+<apex:pageBlockSectionItem >
+<apex:pageblockTable value="{!selecteditems}" var="i">
+<apex:column value="{!i.name}"/>
+<apex:column value="{!i.accountnumber}"/>
+</apex:pageblockTable>
+</apex:pageBlockSectionItem>
+</apex:pageBlockSection>
+</apex:pageBlock>
+Total :
+<apex:outputText label="Total" value="{!tot}"/>
+</apex:outputpanel>
+<apex:outputPanel >
+<apex:form >
+Enter Coupon[Paste this : SPUDHISE]
+<apex:inputtext value="{!coup}"/>
+<apex:commandButton value="checkout"/>
+</apex:form>
+</apex:outputPanel>
+</apex:page>

@@ -1,0 +1,11 @@
+<apex:page controller="Example3">
+<apex:form >
+<apex:outputLabel >EnterSomething</apex:outputLabel>
+<apex:inputText value="{!name}"/>
+<apex:commandButton value="click" reRender="xy"/>
+<apex:outputLabel id="xy">{!name}</apex:outputLabel>
+<apex:commandbutton value="click" action="{!show}" rerender="yz"/>
+<apex:outputlabel id="yz">{!name}</apex:outputlabel>/>
+</apex:form>
+
+</apex:page>

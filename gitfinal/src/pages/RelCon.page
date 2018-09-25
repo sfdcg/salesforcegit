@@ -1,0 +1,18 @@
+<apex:page Controller="RelConCon">
+<apex:form >
+<apex:inputtext value="{!named}"/>
+<apex:commandButton value="Fetch" action="{!fetch}"/>
+<apex:pageblock >
+<apex:pageblockSection >
+<apex:pageblockTable value="{!c}" var="a" id="hr">
+<apex:column headerValue="id">
+{!a.id}
+</apex:column>
+<apex:column headerValue="Name">
+{!a.name}
+</apex:column>
+</apex:pageblockTable>
+</apex:pageblockSection>
+</apex:pageblock>
+</apex:form>
+</apex:page>

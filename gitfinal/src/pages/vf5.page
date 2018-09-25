@@ -1,0 +1,28 @@
+<apex:page controller="Example4">
+<apex:form >
+<apex:pageblock title="calculator">
+<apex:pageBLockSection columns="1" title="simple operations" collapsible="false">
+<apex:pageblocksectionItem >
+<apex:outputLabel >Enter A value</apex:outputLabel>
+<apex:inputtext value="{!avalue}"/>
+</apex:pageblocksectionItem>
+<apex:pageblocksectionItem >
+<apex:outputlabel >Enter B value</apex:outputlabel>
+<apex:inputtext value="{!bvalue}"/>
+</apex:pageblocksectionItem>
+<apex:pageblocksectionItem >
+<apex:outputLabel >enter addition or subraction</apex:outputLabel>
+<apex:inputText value="{!operation}"/>
+</apex:pageblocksectionItem>
+<apex:pageblocksectionItem >
+<apex:commandButton value="submit" action="{!op}" rerender="outcome"/>
+</apex:pageblocksectionItem>
+<apex:pageblockSectionItem >
+
+<apex:outputlabel id="outcome">You have performed {!operation} of {!avalue} and {!bvalue} and the result is {!result}</apex:outputlabel>
+</apex:pageblockSectionItem>
+
+</apex:pageBLockSection>
+</apex:pageblock>
+</apex:form>
+</apex:page>

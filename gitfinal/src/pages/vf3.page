@@ -1,0 +1,8 @@
+<apex:page controller="Example2">
+<apex:form >
+<apex:outputLabel >Enter Name</apex:outputLabel>
+<apex:inputtext value="{!name}"/>
+<apex:commandbutton value="click" reRender="three"/>
+<apex:outputLabel >your name is {!name}</apex:outputLabel>
+</apex:form>
+</apex:page>

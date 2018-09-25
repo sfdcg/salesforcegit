@@ -1,0 +1,6 @@
+<apex:page sidebar="false" controller="newAc">
+  <apex:form >
+  <apex:inputText value="{!nV}"/>
+  <apex:commandButton value="insert" action="{!doInsert}"/>
+  </apex:form>
+</apex:page>

@@ -1,0 +1,10 @@
+<apex:page controller="Example6">
+<apex:form >
+<apex:pageBlock >
+<apex:pageblocktable value="{!myval}" var="a">
+<apex:column value="{!a}"/>
+</apex:pageblocktable>
+<apex:outputLabel >{!name}</apex:outputLabel>
+</apex:pageBlock>
+</apex:form>
+</apex:page>
